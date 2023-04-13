@@ -5,7 +5,8 @@ const router = require('express').Router();
 const { User } = require('../../db/models');
 const { restoreUser } = require('../../utils/auth.js');
 // const { requireAuth } = require('../../utils/auth.js');
-const {sessionRouter} = require('./session')
+const sessionRouter = require('./session')
+const usersRouter = require('./users')
 
 
 // router.post('/test', function(req, res) {
