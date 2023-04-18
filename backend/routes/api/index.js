@@ -7,6 +7,7 @@ const { restoreUser } = require('../../utils/auth.js');
 // const { requireAuth } = require('../../utils/auth.js');
 const sessionRouter = require('./session')
 const usersRouter = require('./users')
+const spotsRouter = require('./spots')
 
 
 // router.post('/test', function(req, res) {
@@ -44,9 +45,13 @@ router.use('/session', sessionRouter);
 
 router.use('/users', usersRouter);
 
+router.use('/spots', spotsRouter);
+
 router.post('/test', (req, res) => {
   res.json({ requestBody: req.body });
 });
+
+
 
 
 module.exports = router;
