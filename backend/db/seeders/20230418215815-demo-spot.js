@@ -13,7 +13,7 @@ module.exports = {
      * }], {});
     */
 
-    options.tableName = 'Users'
+    options.tableName = 'Spots'
     return queryInterface.bulkInsert(options, [
       {
     address: 'Lost',
