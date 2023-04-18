@@ -51,7 +51,6 @@ module.exports = {
     }
     ], {})
   },
-  },
 
   async down (queryInterface, Sequelize) {
     /**
@@ -60,5 +59,7 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
-  }
+
+    await queryInterface.bulkDelete('Spot')
+
 };
