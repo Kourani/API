@@ -14,13 +14,14 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Booking.init({
+
     startDate:{
-      type:DataTypes.DATE,
-      allowNull:false
+      type:DataTypes.STRING,
+      // allowNull:false
     },
     endDate:{
-      type:DataTypes.DATE,
-      allowNull:false
+      type:DataTypes.STRING,
+      // allowNull:false
     },
   }, {
     sequelize,

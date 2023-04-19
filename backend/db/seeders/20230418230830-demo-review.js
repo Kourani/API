@@ -16,19 +16,20 @@ module.exports = {
 
     options.tableName = 'Reviews'
     return queryInterface.bulkInsert(options, [
-      {
-    review: 'Lost',
-    stars: 5,
-    },
-    {
-      review: 'Lost2',
-      stars: 4,
-      },
-      {
+        {
+        review: 'Lost',
+        stars: 5,
+        },
+
+        {
+          review: 'Lost2',
+          stars: 4,
+        },
+
+        {
         review: 'Lost1',
         stars: 3,
         },
-    {
 
     ], {})
   },
@@ -41,5 +42,10 @@ module.exports = {
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
+
+    options.tableName = 'Reviews'
+    return queryInterface.bulkDelete(options,{
+      review, stars
+    }, {})
   }
 };

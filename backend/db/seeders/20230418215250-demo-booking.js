@@ -18,15 +18,15 @@ module.exports = {
     return queryInterface.bulkInsert(options, [
       {
     startDate: 'Lost',
-    endDate: 'Avenger',
+    endDate: 'Aenger'
     },
     {
       startDate: 'Lost',
-      endDate: 'Avenger',
+      endDate: 'Avenr',
     },
     {
       startDate: 'Lost',
-      endDate: 'Avenger',
+      endDate: 'Avengr'
     }
     ], {})
   },
@@ -40,6 +40,9 @@ module.exports = {
      * await queryInterface.bulkDelete('People', null, {});
      */
 
-    await queryInterface.bulkDelete('Booking')
+    options.tableName = 'Bookings'
+    return queryInterface.bulkDelete(options,{
+      stateDate, endDate
+    }, {})
   }
 };

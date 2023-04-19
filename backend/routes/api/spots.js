@@ -6,6 +6,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
 
+    console.log('inside')
     await Spot.findAll()
 } )
 
